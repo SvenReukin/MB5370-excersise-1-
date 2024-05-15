@@ -41,14 +41,14 @@ library(tidyverse)
 
 ```{r}
 ggplot(data = figure_dataset) + 
-  geom_smooth(mapping = aes(x = year, y = reported_catch))
+  geom_line(mapping = aes(x = year, y = reported_catch))
 ```
 
 
 
 ```{r}
 ggplot(data = figure_dataset) + 
-  geom_smooth(mapping = aes(x = year, y = percent_overcatch))
+  geom_line(mapping = aes(x = year, y = percent_overcatch))
 ```
 
 
