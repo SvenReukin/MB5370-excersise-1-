@@ -26,29 +26,37 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
-
+# installing and running packages 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 ```{r}
-install.packages("reader")
+#install.packages("reader")
 library(reader)
 figure_dataset <- read.csv("figure_dataset.csv")
 View (figure_dataset)
 ```
-
 ```{r}
+#install.packages("tidyverse")
 library(tidyverse)
 ```
+# paper of original figure 
+#https://www.sciencedirect.com/science/article/pii/S0308597X1200036X#bib18 
+#The paper used a figure comparing catch rates of blue fin tuna with percent over 
+#catch. The figure used two y axis which can make the data missleading and 
+#it made the figure hard to read. 
+#We re plotted the figure and instead separated the two graphs so they can be
+#compared seperatly. 
 
+# Graphing the data 
 ```{r}
 ggplot(data = figure_dataset) + 
-  geom_line(mapping = aes(x = year, y = reported_catch))
+  geom_line(mapping = aes(x = year, y = reported_catch)) +
+  labs(title = "Reported catch of blue fin tuna", x = "Year", y = "Tonnes")
 ```
 
-
-
 ```{r}
 ggplot(data = figure_dataset) + 
-  geom_line(mapping = aes(x = year, y = percent_overcatch))
+  geom_line(mapping = aes(x = year, y = percent_overcatch)) +
+  labs(title = "Percent estimate of overcatch", x = "Year", y = "Percent overcatch")
 ```
 
 
