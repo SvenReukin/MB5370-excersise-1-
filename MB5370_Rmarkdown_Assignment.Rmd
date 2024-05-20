@@ -39,12 +39,9 @@ View (figure_dataset)
 library(tidyverse)
 ```
 # paper of original figure 
-#https://www.sciencedirect.com/science/article/pii/S0308597X1200036X#bib18 
-#The paper used a figure comparing catch rates of blue fin tuna with percent over 
-#catch. The figure used two y axis which can make the data missleading and 
-#it made the figure hard to read. 
-#We re plotted the figure and instead separated the two graphs so they can be
-#compared seperatly. 
+### https://www.sciencedirect.com/science/article/pii/S0308597X1200036X#bib18 
+### The paper used a figure comparing catch rates of blue fin tuna with percent over catch. The figure used two y axis which can make the data missleading and it made the figure hard to read. 
+### We re plotted the figure and instead separated the two graphs so they can be compared seperatly. 
 
 # Graphing the data 
 ```{r}
